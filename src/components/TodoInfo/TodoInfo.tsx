@@ -23,6 +23,7 @@ type Props = {
 export const TodoInfo = ({ todo }: Props) => {
   return (
     <div
+      data-id={todo.id}
       className={classNames('TodoInfo', {
         'TodoInfo--completed': todo.completed,
       })}

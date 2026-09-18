@@ -25,15 +25,14 @@ export const App = () => {
       return;
     }
 
-    setTodos([
-      ...todos,
-      {
-        id: Math.max(...todos.map(todo => todo.id)) + 1,
-        title: titleInput,
-        completed: false,
-        userId: userInput,
-      },
-    ]);
+    const newTodo = {
+      id: Math.max(...todos.map(todo => todo.id)) + 1,
+      title: titleInput,
+      completed: false,
+      userId: userInput,
+    };
+
+    setTodos([...todos, newTodo]);
 
     setTitleInput('');
     setUserInput(0);
